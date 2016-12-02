@@ -1,0 +1,98 @@
+html,body{
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+}
+.box{
+	height:100%;
+	background:red;
+}
+.swiper-container{
+	width:100%;
+	height:100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(1){
+	background:url(../img/bg1.jpg);
+	background-size:cover;
+}
+.bg2{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	margin-bottom:1.17rem;
+}
+.text{
+	margin-top:2.4rem;
+	font-family: "华文新魏";
+	font-size:1.24rem;
+	text-align:center;
+	color:#fff;
+}
+.text span{
+	display:inline-block;
+	padding:0;
+}
+.swiper-wrapper .swiper-slide:nth-child(2){
+	background:url(../img/bg2.jpg);
+	background-size:cover;
+}
+.bg3{
+	position:absolute;
+	bottom:0;
+	margin-bottom:1rem;
+	margin-left:1.18rem;
+	width:5.11rem;
+	height:9.1rem;
+}
+.bg4{
+	width:100%;
+	position:absolute;
+	top:6.67rem;
+	z-index:1;
+}
+.bg5,.bg6{
+	width:100%;
+	position:absolute;
+	bottom:0;
+}
+p{
+	margin:0;
+	padding:0;
+}
+.text1{
+	text-align: center;
+	font-size:0.72rem;
+	font-family: "苹方";
+	margin-top:1rem;
+	color:#fff;
+}
+.text2{
+	text-align: center;
+	font-size:0.48rem;
+	font-family: "苹方";
+	margin-top:0.17rem;
+	color:#fff;
+}
+.swiper-wrapper .swiper-slide:nth-child(3){
+	background:url(../img/bg2.jpg);
+	background-size:cover;
+}
+.bg7{
+	width:100%;
+	margin-bottom:1rem;
+}
+.bg8{
+	width:3.80rem;
+	height:3.44rem;
+	position:absolute;
+	left:0;
+	bottom:6.05rem;
+}
+.bg9{
+	width:3.47rem;
+	height:2.63rem;
+	position:absolute;
+	right:0;
+	bottom:6.05rem;
+}

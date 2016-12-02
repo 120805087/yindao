@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>引导页</title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/yingdao.css" />
+		<script src="js/zepto.js"></script>
+		<script src="js/swiper.jquery.min.js"></script>
+		<!--<script src="js/swiper.animate1.0.2.min.js"></script>-->
+		<script src="js/swiper.animate-twice.min.js"></script>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img class="bg2 ani" data-slide-in="at 400 from bounceInDown use swing during 500" data-slide-out="at 1000 to bounce use swing during 1500 force" src="img/bg2.png" alt=""/>
+					<div class="text">
+						<span class="ani" data-slide-in="at 500 from bounceInLeft use swing during 500" data-slide-out="at 0 to bounce use swing during 1500">音乐</span>
+						<span class="ani" data-slide-in="at 1300 from bounceInDown use swing during 500" data-slide-out="at 0 to bounce use swing during 1500 force">跑酷</span>
+						<span  class="ani" data-slide-in="at 1000 from bounceInDown use swing during 500" data-slide-out="at 0 to bounce use swing during 1500">听</span>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<p class="text1 ani" data-slide-in="at 800 from pulse use swing during 1000">最大的</p>
+					<p class="text2 ani" data-slide-in="at 1200 from pulse use swing during 1000">原创音乐社区</p>
+					<img class="bg3 ani" data-slide-in="at 100 from bounceInDown use swing during 500" data-slide-out="at 500 to swing use swing during 500 force" src="img/bg3.png" alt="" />
+					<img class="bg4 ani" data-slide-in="at 300 from bounceInRight use swing during 1000" src="img/bg4.png" alt="" />
+					<img class="bg5 ani" data-slide-in="at 800 from fadeInUp use swing during 500" src="img/bg5.png" alt="" />
+					<img class="bg6 ani"  data-slide-in="at 800 from fadeInUp use swing during 500" src="img/bg6.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<p class="text1 ani" data-slide-in="at 800 from pulse use swing during 1000">等你来战</p>
+					<p class="text2 ani" data-slide-in="at 1200 from pulse use swing during 1000">百万量电台</p>
+					<img class="bg7 ani" data-slide-in="at 100 from rubberBand use swing during 500" src="img/bg7.png" alt="" />
+					<img class="bg8 ani" data-slide-in="at 300 from bounceInLeft use swing during 1000" src="img/bg8.png" alt="" />
+					<img class="bg9 ani" data-slide-in="at 300 from bounceInRight use swing during 1000" src="img/bg9.png" alt="" />
+					<img class="bg5 ani" data-slide-in="at 800 from fadeInUp use swing during 500" src="img/bg5.png" alt="" />
+					<img class="bg6 ani"  data-slide-in="at 800 from fadeInUp use swing during 500" src="img/bg6.png" alt="" />
+				</div>
+			</div>
+			 <div class="swiper-pagination"></div>
+		</div>
+	</body>
+	<script>
+		window.onload = function(){
+			function resize(origin,type){
+				type = type||"x";
+				if(type=="x"){
+					var widths = document.documentElement.clientWidth;
+					var scale = widths/origin*100+"px";
+				}else if(type=="y"){
+					var heights = document.documentElement.clientHeight;
+					var scale = heights/origin*100+"px";
+				}
+				document.getElementsByTagName("html")[0].style.fontSize = scale;
+			}
+			resize(1334,"y");
+			var mySwiper = new Swiper('.swiper-container',{
+pagination : '.swiper-pagination',
+             onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+})
+		}
+	</script>
+</html>
